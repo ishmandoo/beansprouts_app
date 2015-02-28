@@ -1,29 +1,30 @@
 {
-  "name": "student",
+  "name": "log",
   "base": "PersistedModel",
   "idInjection": true,
   "properties": {
-    "name": {
+    "event": {
       "type": "string",
       "required": true
     },
-    "status": {
-      "type": "string",
-      "required": true
-    },
-    "last_action_date": {
+    "time": {
       "type": "date",
       "required": true
     }
   },
   "validations": [],
   "relations": {
-    "preschool_class": {
+    "student": {
       "type": "hasOne",
-      "model": "class",
+      "model": "student",
       "foreignKey": ""
     },
-    "afterschool_class": {
+    "teacher": {
+      "type": "hasOne",
+      "model": "teacher",
+      "foreignKey": ""
+    },
+    "class": {
       "type": "hasOne",
       "model": "class",
       "foreignKey": ""

@@ -33,5 +33,13 @@
   "class": {
     "dataSource": "beansprouts_db",
     "public": true
+  },
+  "teacher": {
+    "dataSource": "beansprouts_db",
+    "public": true
+  },
+  "log": {
+    "dataSource": "beansprouts_db",
+    "public": true
   }
 }

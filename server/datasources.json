@@ -4,9 +4,9 @@
     "connector": "memory"
   },
   "beansprouts_db": {
+    "port": 27017,
+    "database": "beansprouts_db",
     "name": "beansprouts_db",
-    "connector": "mongodb",
-    "port" : 10000,
-    "database" : "beansprouts_db"
+    "connector": "mongodb"
   }
 }
