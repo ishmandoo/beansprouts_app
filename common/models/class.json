@@ -10,7 +10,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "students": {
+      "type": "hasMany",
+      "model": "student",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": []
 }

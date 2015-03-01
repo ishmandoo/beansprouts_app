@@ -1,0 +1,10 @@
+<div>
+  <div ng-repeat="student in students">
+    {{ student.name }}
+    <button type="submit" ng-click="checkIn(student.id)"> Check In </button>
+  </div>
+
+
+  <input type="text" ng-model="name" placeholder="Name">
+  <input type="submit" ng-click="newStudent()">
+</div>

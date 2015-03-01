@@ -17,18 +17,7 @@
     }
   },
   "validations": [],
-  "relations": {
-    "preschool_class": {
-      "type": "hasOne",
-      "model": "class",
-      "foreignKey": ""
-    },
-    "afterschool_class": {
-      "type": "hasOne",
-      "model": "class",
-      "foreignKey": ""
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": []
 }
