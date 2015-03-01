@@ -25,20 +25,33 @@ controllers.controller("studentListController", ["$scope", "$http", "$routeParam
 
   $scope.newStudent = function() {
     console.log($scope.name);
-    $http.post('/api/classes/'+$routeParams.id+'/students', {name:$scope.name, status:"out", last_action_date:new Date()})
+    $http.post('/api/classes/'+$routeParams.id+'/students', {name:$scope.name, status:"checked out", last_action_date:new Date()})
     .success(function(student){
       $scope.students.push(student);
       $scope.name = "";
     });
   };
 
-  $scope.checkIn = function(studentId) {
-    $http.post('/api/students/checkin', {studentId:studentId})
+  $scope.checkInPre = function(studentId) {
+    $http.post('/api/students/checkinpre', {studentId:studentId})
     .success(function(student){
-      console.log("logged in");
+      $scope.getStudents();
     });
   }
 
+  $scope.checkInAfter = function(studentId) {
+    $http.post('/api/students/checkinafter', {studentId:studentId})
+    .success(function(student){
+      $scope.getStudents();
+    });
+  }
+
+  $scope.checkOut = function(studentId) {
+    $http.post('/api/students/checkOut', {studentId:studentId})
+    .success(function(student){
+      $scope.getStudents();
+    });
+  }
 
   $scope.getStudents();
 }]);

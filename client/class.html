@@ -1,7 +1,9 @@
 <div>
   <div ng-repeat="student in students">
     {{ student.name }}
-    <button type="submit" ng-click="checkIn(student.id)"> Check In </button>
+    <button class="btn" type="submit" ng-click="checkInPre(student.id)" ng-disabled="!(student.status == 'checked out')"> Check In </button>
+    <button class="btn" type="submit" ng-click="checkInAfter(student.id)" ng-disabled="(student.status == 'checked in after')"> Check In </button>
+    <button class="btn" type="submit" ng-click="checkOut(student.id)" ng-disabled="(student.status == 'checked out')"> Check Out </button>
   </div>
 
 
